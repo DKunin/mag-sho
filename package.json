@@ -1,0 +1,27 @@
+{
+  "name": "mag-sho",
+  "version": "0.0.1",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dkunin/mag-sho.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dkunin/mag-sho/issues"
+  },
+  "scripts": {
+    "test": "echo test",
+    "start": "node ./",
+    "dev": "node ./",
+    "build": "NODE_ENV=production node ./"
+  },
+  "homepage": "https://github.com/dkunin/mag-sho",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.15.2",
+    "hasha": "2.2.0",
+    "node-json-db": "0.7.3"
+  }
+}
