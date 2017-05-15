@@ -7,6 +7,10 @@ const app = express();
 const PORT = 3738;
 const db = new JsonDB('links', true);
 
+function clearDb() {
+    fs.writeFileSync('./links.json', '{}', () => {});
+}
+
 app.get('/api/shorten', function(req, res) {
     const { url } = req.query;
     const unescaped = unescape(url);
@@ -20,9 +24,12 @@ app.get('/api/get', function(req, res) {
     res.redirect(db.getData('/' + hash));
 });
 
+app.get('/api/clear', function(req, res) {
+    clearDb();
+    res.send('ok');
+});
+
 // Clead DB every hour
-setInterval(() => {
-    fs.writeFileSync('./links.json', '{}', () => {});
-}, 1000 * 60 * 60);
+setInterval(clearDb, 1000 * 60 * 60);
 
 app.listen(PORT);

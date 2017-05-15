@@ -1,6 +1,6 @@
 {
   "name": "mag-sho",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "private": false,
   "main": "index.js",
   "repository": {
@@ -11,6 +11,7 @@
     "url": "https://github.com/dkunin/mag-sho/issues"
   },
   "scripts": {
+    "pretty": "prettier --single-quote --tab-width 4 --write ./*.js",
     "test": "echo test",
     "start": "node ./",
     "dev": "node ./",

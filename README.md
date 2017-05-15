@@ -8,6 +8,7 @@
 
 get localhost:3738/api/shorten?url=<MAGNET_LINK>
 get localhost:3738/api/get?hash=<HASH>
+get localhost:3738/api/clear // Clear 'db'
 
 ```
 
